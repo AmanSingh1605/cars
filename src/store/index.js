@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { carsReducer, addCar, deleteCar } from "./slices/carsSlices";
+import { carsReducer, addCar, deleteCar, changeTerm } from "./slices/carsSlices";
 import { formReducer, changeCost, changeName } from "./slices/formSlices";
 
 const store = configureStore({
@@ -9,6 +9,6 @@ const store = configureStore({
     }
 });
 
-export { addCar, deleteCar, changeCost, changeName, store };
+export { addCar, deleteCar, changeCost, changeName, changeTerm, store };
 
 console.log(store.getState())

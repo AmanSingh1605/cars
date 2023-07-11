@@ -19,7 +19,7 @@ const carsSlice = createSlice({
         },
         deleteCar(state, action) {
             const updated = state.cars.filter((car) => {
-                return arguments.id !== action.payload.id;
+                return car.id !== action.payload;
             })
             state.cars = updated;
         }

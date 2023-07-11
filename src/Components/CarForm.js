@@ -10,7 +10,7 @@ function CarForm() {
             cost: state.form.cost
         };
     })
-    
+
     const handleNameChange = (event) => {
         dispatch(changeName(event.target.value));
 
@@ -24,20 +24,20 @@ function CarForm() {
         dispatch(addCar({ name: name, cost: cost }));
     }
 
-    return (<div className="">
-        <h4>Add Car</h4>
+    return (<div className="m-4">
+        <h4 className="text-xl m-2">Add Car</h4>
         <form onSubmit={handleSubmit}>
-            <div className="">
-                <div className="">
-                    <label htmlFor="" className="label">Name</label>
-                    <input type="text" value={name} onChange={handleNameChange} className="" />
+            <div className="flex justify-around">
+                <div className="flex items-center">
+                    <label htmlFor="" className="label font-semibold  pe-4">Name</label>
+                    <input type="text" value={name} required onChange={handleNameChange} className="border-2 rounded px-2 " />
                 </div>
-                <div className="">
-                    <label htmlFor="" className="label">Cost</label>
-                    <input type="number" value={cost || ""} onChange={handleCostChange} className="" />
+                <div className="flex items-center ">
+                    <label htmlFor="" className="label font-semibold  pe-4">Cost</label>
+                    <input type="number" value={cost || ""} required onChange={handleCostChange} className="border-2 rounded px-2" />
                 </div>
                 <div>
-                    <button type="submit">Submit</button>
+                    <button type="submit" className="border-2 rounded-xl active:shadow-md active:bg-slate-100 px-2">Submit</button>
                 </div>
             </div>
         </form>

@@ -8,6 +8,8 @@ function App() {
   return (
     <div>
       <CarForm />
+      <CarSearch />
+      <CarList />
     </div>
   );
 }
